@@ -3,125 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kate Karleen | Voice Talent</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Kate Karleen | Professional Voice Over</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --lilac: #D8BFD8;
-            --navy: #000080;
-            --sage: #87A96B;
-            --glass: rgba(255, 255, 255, 0.1);
-            --text: #ffffff;
+            --lilac: #C9A0DC;
+            --oatmeal: #F9F5F2;
+            --charcoal: #2B2233;
+            --sage: #708238;
+            --glass: rgba(255, 255, 255, 0.6);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            background: linear-gradient(135deg, var(--navy) 0%, #001a33 100%);
-            color: var(--text);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            padding: 20px;
+            background: linear-gradient(135deg, var(--oatmeal) 0%, var(--lilac) 100%);
+            background-attachment: fixed;
+            color: var(--charcoal);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            padding: 40px 20px;
+            line-height: 1.5;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 24px;
         }
 
-        /* Bento Grid Layout */
         .card {
             background: var(--glass);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 30px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 32px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); }
+
+        /* HERO CARD */
+        .hero { grid-column: span 3; display: flex; flex-direction: column; justify-content: space-between; }
+        .status-badge {
+            background: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: fit-content;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .hero {
-            grid-column: span 2;
-            background: linear-gradient(45deg, var(--lilac), #e6d5e6);
-            color: var(--navy);
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        .hero p { font-weight: 600; font-size: 1.2rem; }
-
-        .cta-card {
-            grid-column: span 1;
-            background: var(--sage);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .cta-card a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .reels-card {
-            grid-column: span 3;
-        }
-
-        .reel-item {
+            align-items: center;
+            gap: 8px;
             margin-bottom: 20px;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 15px;
-            border-radius: 15px;
         }
+        .status-dot { width: 8px; height: 8px; background: var(--sage); border-radius: 50%; box-shadow: 0 0 10px var(--sage); }
 
-        audio {
-            width: 100%;
-            margin-top: 10px;
-            filter: sepia(20%) hue-rotate(240deg) saturate(70%); /* Matches the Lilac vibe */
-        }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; opacity: 0.8; font-weight: 300; }
 
-        .specs-card {
-            grid-column: span 3;
-            border: 1px solid var(--lilac);
-        }
+        /* QUOTE CARD */
+        .cta-card { grid-column: span 1; background: var(--charcoal); color: var(--oatmeal); display: flex; align-items: center; text-align: center; }
+        .cta-card a { color: var(--lilac); text-decoration: none; font-weight: 700; font-size: 1.5rem; line-height: 1.2; }
+        .cta-card:hover { background: #1a1520; }
 
-        .specs-list {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 15px;
-        }
+        /* REELS CARD */
+        .reels-card { grid-column: span 2; }
+        .reel-item { margin-top: 25px; background: rgba(255,255,255,0.4); padding: 20px; border-radius: 20px; }
+        .reel-tag { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--sage); margin-bottom: 5px; display: block; }
+        audio { width: 100%; height: 35px; margin-top: 10px; opacity: 0.8; }
 
-        .spec-item {
-            text-align: center;
-            font-size: 0.9rem;
-        }
+        /* SPECIALTY CARD (The "Bio" Edge) */
+        .specialty-card { grid-column: span 2; background: rgba(112, 130, 56, 0.1); border: 1px solid var(--sage); }
+        .specialty-card h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 15px; }
+        .tag-cloud { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        .tag { background: white; padding: 6px 14px; border-radius: 10px; font-size: 0.85rem; font-weight: 600; }
 
-        .spec-item strong { color: var(--lilac); display: block; }
+        /* STUDIO SPECS */
+        .specs-card { grid-column: span 4; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; padding: 25px; }
+        .spec-item { text-align: center; padding: 10px; }
+        .spec-item strong { display: block; font-size: 0.7rem; text-transform: uppercase; opacity: 0.6; margin-bottom: 4px; }
+        .spec-item span { font-weight: 700; color: var(--charcoal); }
 
-        footer {
-            grid-column: span 3;
-            text-align: center;
-            font-size: 0.8rem;
-            opacity: 0.6;
-            margin-top: 20px;
-        }
-
-        /* Mobile Optimization */
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .container { grid-template-columns: 1fr; }
-            .hero, .cta-card, .reels-card, .specs-card { grid-column: span 1; }
-            .hero h1 { font-size: 2.2rem; }
+            .hero, .cta-card, .reels-card, .specialty-card, .specs-card { grid-column: span 1; }
         }
     </style>
 </head>
@@ -129,46 +100,54 @@
 
     <div class="container">
         <div class="card hero">
-            <h1>Kate Karleen</h1>
-            <p>Voice Talent | Animation • Video Games • Narration</p>
+            <div class="status-badge">
+                <div class="status-dot"></div> Available for Sessions
+            </div>
+            <div>
+                <h1>Kate Karleen</h1>
+                <p>Voiceover Artist • <em>Clear narration and versatile character performance.</em></p>
+            </div>
         </div>
 
         <div class="card cta-card">
-            <a href="mailto:hello@katekarleenvo.com">BOOK A SESSION</a>
+            <a href="mailto:kateallureva@gmail.com">CONTACT→</a>
         </div>
 
         <div class="card reels-card">
-            <h2 style="color: var(--lilac); margin-bottom: 20px;">Voice Reels</h2>
-            
+            <h2 style="font-family: 'Playfair Display', serif;">Sample Reels</h2>
             <div class="reel-item">
-                <p>Character / Animation</p>
-                <audio controls>
-                    <source src="assets/character-reel.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
+                <span class="reel-tag">Animation / Games</span>
+                <audio controls src="assets/character-reel.mp3"></audio>
             </div>
-
             <div class="reel-item">
-                <p>Commercial / Narration</p>
-                <audio controls>
-                    <source src="assets/commercial-reel.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
+                <span class="reel-tag">Commercial / Narration</span>
+                <audio controls src="assets/commercial-reel.mp3"></audio>
+            </div>
+        </div>
+
+        <div class="card specialty-card">
+            <h3>Specialties</h3>
+            <p>From commercial narration to high-energy character dubbing and trailers, I bring precision and performance to every script.</p>
+            <div class="tag-cloud">
+                <span class="tag">Commercial</span>
+                <span class="tag">Animation</span>
+                <span class="tag">Video Game</span>
+                <span class="tag">Trailer</span>
+		<span class="tag">Audiobook</span>
+                <span class="tag">Technical Explainer</span>
+		<span class="tag">E-learning</span>
             </div>
         </div>
 
         <div class="card specs-card">
-            <h3 style="text-align: center;">Professional Home Studio</h3>
-            <div class="specs-list">
-                <div class="spec-item"><strong>Microphone</strong>Lewitt LCT 440 Pure</div>
-                <div class="spec-item"><strong>Interface</strong>Focusrite Scarlett 2i2</div>
-                <div class="spec-item"><strong>Monitoring</strong>Beyerdynamic DT 770 Pro</div>
-                <div class="spec-item"><strong>Environment</strong>Pro-Treated Space</div>
-            </div>
+            <div class="spec-item"><strong>Mic</strong><span>Lewitt LCT 440 Pure / Shure SM7B</span></div>
+            <div class="spec-item"><strong>Interface</strong><span>Scarlett 2i2 4th Gen</span></div>
+            <div class="spec-item"><strong>Room</strong><span>Acoustically-Treated Booth </span></div>
+            <div class="spec-item"><strong>Connectivity</strong><span>SourceConnect / Zoom</span></div>
         </div>
 
-        <footer>
-            &copy; 2026 Kate Karleen Voiceover. All rights reserved.
+        <footer style="grid-column: span 4; text-align: center; padding: 20px; opacity: 0.4; font-size: 0.8rem;">
+            &copy; 2026 Kate Karleen. Professional Voiceover Services.
         </footer>
     </div>
 
