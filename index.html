@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kate Karleen | Voice Talent</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lilac: #D8BFD8;
+            --navy: #000080;
+            --sage: #87A96B;
+            --glass: rgba(255, 255, 255, 0.1);
+            --text: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background: linear-gradient(135deg, var(--navy) 0%, #001a33 100%);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+        }
+
+        /* Bento Grid Layout */
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero {
+            grid-column: span 2;
+            background: linear-gradient(45deg, var(--lilac), #e6d5e6);
+            color: var(--navy);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p { font-weight: 600; font-size: 1.2rem; }
+
+        .cta-card {
+            grid-column: span 1;
+            background: var(--sage);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-card a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .reels-card {
+            grid-column: span 3;
+        }
+
+        .reel-item {
+            margin-bottom: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 10px;
+            filter: sepia(20%) hue-rotate(240deg) saturate(70%); /* Matches the Lilac vibe */
+        }
+
+        .specs-card {
+            grid-column: span 3;
+            border: 1px solid var(--lilac);
+        }
+
+        .specs-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .spec-item {
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .spec-item strong { color: var(--lilac); display: block; }
+
+        footer {
+            grid-column: span 3;
+            text-align: center;
+            font-size: 0.8rem;
+            opacity: 0.6;
+            margin-top: 20px;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+            .hero, .cta-card, .reels-card, .specs-card { grid-column: span 1; }
+            .hero h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card hero">
+            <h1>Kate Karleen</h1>
+            <p>Voice Talent | Animation • Video Games • Narration</p>
+        </div>
+
+        <div class="card cta-card">
+            <a href="mailto:hello@katekarleenvo.com">BOOK A SESSION</a>
+        </div>
+
+        <div class="card reels-card">
+            <h2 style="color: var(--lilac); margin-bottom: 20px;">Voice Reels</h2>
+            
+            <div class="reel-item">
+                <p>Character / Animation</p>
+                <audio controls>
+                    <source src="assets/character-reel.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <div class="reel-item">
+                <p>Commercial / Narration</p>
+                <audio controls>
+                    <source src="assets/commercial-reel.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+
+        <div class="card specs-card">
+            <h3 style="text-align: center;">Professional Home Studio</h3>
+            <div class="specs-list">
+                <div class="spec-item"><strong>Microphone</strong>Lewitt LCT 440 Pure</div>
+                <div class="spec-item"><strong>Interface</strong>Focusrite Scarlett 2i2</div>
+                <div class="spec-item"><strong>Monitoring</strong>Beyerdynamic DT 770 Pro</div>
+                <div class="spec-item"><strong>Environment</strong>Pro-Treated Space</div>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2026 Kate Karleen Voiceover. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
