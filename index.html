@@ -94,6 +94,27 @@
             .container { grid-template-columns: 1fr; }
             .hero, .cta-card, .reels-card, .specialty-card, .specs-card { grid-column: span 1; }
         }
+        
+    /* ... all your existing Oatmeal and Lilac colors and grid code ... */
+
+    /* ADD THIS AT THE VERY BOTTOM OF THE STYLE SECTION */
+    @media (max-width: 768px) {
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            gap: 20px;
+        }
+        .card {
+            width: 100%;
+            height: auto;
+            grid-column: span 1 !important; /* Forces all 'spans' to be 1 column wide */
+        }
+        h1 {
+            font-size: 2rem; /* Shrinks your name slightly so it doesn't wrap weirdly */
+        }
+    }
+
     </style>
 </head>
 <body>
