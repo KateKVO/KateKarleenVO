@@ -97,6 +97,27 @@
         
     /* ... all your existing Oatmeal and Lilac colors and grid code ... */
 
+/* This sets the smooth transition for all cards */
+.card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent; /* Prevents "jumping" when the border appears */
+}
+
+/* This triggers the effect when the mouse touches the card */
+.card:hover {
+    transform: translateY(-8px); /* Lifts the card up slightly */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Adds a soft shadow underneath */
+    border-color: #D1C4E9; /* A soft Lilac border glow */
+    background-color: #faf9f6; /* A very slight shift in the Oatmeal brightness */
+}
+
+/* Special glow for your Action buttons (like Request a Quote) */
+.btn:hover {
+    background-color: #b8ccb8; /* A slightly deeper Sage */
+    transform: scale(1.05); /* Makes the button pop forward */
+}
+		
     /* ADD THIS AT THE VERY BOTTOM OF THE STYLE SECTION */
     @media (max-width: 768px) {
         .container {
@@ -161,6 +182,7 @@
         </div>
 
         <div class="card specs-card">
+			<img src="KateKarleenIllustrationBranding.png" alt="Illustration of Kate Karleen in her studio with headphones and microphone" class="studio-art">
             <div class="spec-item"><strong>Mic</strong><span>Lewitt LCT 440 Pure / Shure SM7B</span></div>
             <div class="spec-item"><strong>Interface</strong><span>Scarlett 2i2 4th Gen</span></div>
             <div class="spec-item"><strong>Room</strong><span>Acoustically-Treated Booth </span></div>
