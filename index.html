@@ -9,31 +9,20 @@
         :root {
             --lilac: #C9A0DC;
             --oatmeal: #F9F5F2;
-            --charcoal: #2B2233;
+            --navy: #1A2238;
             --sage: #708238;
-            --glass: rgba(255, 255, 255, 0.6);
+            --glass: rgba(255, 255, 255, 0.7);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        img { -webkit-user-drag: none; user-select: none; }
 
-
-.studio-art {
-    width: 100%;        /* Makes the image fit the width of the card */
-    height: 250px;      /* Fixes the height so it doesn't take up the whole screen */
-    object-fit: cover;  /* Magic! This crops the image so it doesn't look "squished" */
-    display: block;     /* Removes weird gaps at the bottom */
-    border-radius: 15px 15px 0 0; /* Rounds the top corners to match your cards */
-    margin-bottom: 15px; /* Adds space before your Navy text starts */
-}
-
-		
         body {
             background: linear-gradient(135deg, var(--oatmeal) 0%, var(--lilac) 100%);
             background-attachment: fixed;
-            color: var(--charcoal);
+            color: var(--navy);
             font-family: 'Plus Jakarta Sans', sans-serif;
             padding: 40px 20px;
-            line-height: 1.5;
         }
 
         .container {
@@ -47,133 +36,116 @@
         .card {
             background: var(--glass);
             backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 32px;
             padding: 40px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.04);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.4s ease;
         }
 
-        .card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); }
-
-        /* HERO CARD */
-        .hero { grid-column: span 3; display: flex; flex-direction: column; justify-content: space-between; }
+        /* HEADER */
+        .hero { grid-column: span 3; }
         .status-badge {
             background: white;
             padding: 8px 16px;
             border-radius: 50px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            width: fit-content;
-            display: flex;
+            display: inline-flex;
             align-items: center;
             gap: 8px;
             margin-bottom: 20px;
         }
         .status-dot { width: 8px; height: 8px; background: var(--sage); border-radius: 50%; box-shadow: 0 0 10px var(--sage); }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 10px; }
+        .hero p { font-size: 1.1rem; font-weight: 300; }
 
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; margin-bottom: 10px; }
-        .hero p { font-size: 1.2rem; opacity: 0.8; font-weight: 300; }
+        /* REVERTED CONTACT BUTTON */
+        .cta-card { 
+            grid-column: span 1; 
+            background: var(--navy); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-decoration: none; 
+            border-radius: 32px; 
+            transition: transform 0.3s ease;
+        }
+        .cta-card:hover { transform: translateY(-5px); background: #252e4a; }
+        .cta-card span { color: var(--lilac); font-weight: 700; font-size: 1.3rem; letter-spacing: 1px; }
 
-        /* QUOTE CARD */
-        .cta-card { grid-column: span 1; background: var(--charcoal); color: var(--oatmeal); display: flex; align-items: center; text-align: center; }
-        .cta-card a { color: var(--lilac); text-decoration: none; font-weight: 700; font-size: 1.5rem; line-height: 1.2; }
-        .cta-card:hover { background: #1a1520; }
-
-        /* REELS CARD */
+        /* DEMOS */
         .reels-card { grid-column: span 2; }
-        .reel-item { margin-top: 25px; background: rgba(255,255,255,0.4); padding: 20px; border-radius: 20px; }
-        .reel-tag { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--sage); margin-bottom: 5px; display: block; }
-        audio { width: 100%; height: 35px; margin-top: 10px; opacity: 0.8; }
+        .reels-card h2 { font-family: 'Playfair Display', serif; margin-bottom: 20px; }
+        .reel-item { margin-top: 15px; background: white; padding: 20px; border-radius: 20px; display: flex; flex-direction: column; gap: 8px; }
+        .reel-label { font-size: 0.7rem; font-weight: 800; color: var(--sage); text-transform: uppercase; letter-spacing: 1px; }
+        audio { width: 100%; height: 40px; }
 
-        /* SPECIALTY CARD (The "Bio" Edge) */
-        .specialty-card { grid-column: span 2; background: rgba(112, 130, 56, 0.1); border: 1px solid var(--sage); }
-        .specialty-card h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 15px; }
-        .tag-cloud { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-        .tag { background: white; padding: 6px 14px; border-radius: 10px; font-size: 0.85rem; font-weight: 600; }
+        /* SPECIALTIES */
+        .specialty-card { grid-column: span 2; }
+        .specialty-card h3 { font-family: 'Playfair Display', serif; margin-bottom: 15px; font-size: 1.8rem; }
+        .specialty-card p { font-size: 0.95rem; margin-bottom: 20px; opacity: 0.8; }
+        .tag-cloud { display: flex; flex-wrap: wrap; gap: 10px; }
+        .tag { background: white; padding: 8px 16px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
 
-        /* STUDIO SPECS */
-        .specs-card { grid-column: span 4; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; padding: 25px; }
-        .spec-item { text-align: center; padding: 10px; }
-        .spec-item strong { display: block; font-size: 0.7rem; text-transform: uppercase; opacity: 0.6; margin-bottom: 4px; }
-        .spec-item span { font-weight: 700; color: var(--charcoal); }
+        /* SIDE-BY-SIDE ART & SPECS */
+        .art-card { 
+            grid-column: span 2; 
+            padding: 0; 
+            overflow: hidden; 
+            height: 500px; 
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            background: white; /* Clean background for the character */
+        }
+        .art-card img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+        .specs-card { 
+            grid-column: span 2; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            gap: 25px; 
+            background: white; 
+            padding: 40px;
+            height: 500px;
+        }
+        .spec-item { border-left: 4px solid var(--sage); padding-left: 20px; }
+        .spec-item strong { display: block; font-size: 0.7rem; text-transform: uppercase; color: var(--sage); margin-bottom: 4px; letter-spacing: 1px; }
+        .spec-item span { font-size: 1.1rem; font-weight: 700; color: var(--navy); }
 
         @media (max-width: 900px) {
             .container { grid-template-columns: 1fr; }
-            .hero, .cta-card, .reels-card, .specialty-card, .specs-card { grid-column: span 1; }
+            .hero, .cta-card, .reels-card, .specialty-card, .art-card, .specs-card { grid-column: span 1; }
+            .art-card, .specs-card { height: auto; padding: 30px; }
         }
-        
-    /* ... all your existing Oatmeal and Lilac colors and grid code ... */
-
-/* This sets the smooth transition for all cards */
-.card {
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: 2px solid transparent; /* Prevents "jumping" when the border appears */
-}
-
-/* This triggers the effect when the mouse touches the card */
-.card:hover {
-    transform: translateY(-8px); /* Lifts the card up slightly */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Adds a soft shadow underneath */
-    border-color: #D1C4E9; /* A soft Lilac border glow */
-    background-color: #faf9f6; /* A very slight shift in the Oatmeal brightness */
-}
-
-/* Special glow for your Action buttons (like Request a Quote) */
-.btn:hover {
-    background-color: #b8ccb8; /* A slightly deeper Sage */
-    transform: scale(1.05); /* Makes the button pop forward */
-}
-		
-    /* ADD THIS AT THE VERY BOTTOM OF THE STYLE SECTION */
-    @media (max-width: 768px) {
-        .container {
-            display: flex;
-            flex-direction: column;
-            padding: 15px;
-            gap: 20px;
-        }
-        .card {
-            width: 100%;
-            height: auto;
-            grid-column: span 1 !important; /* Forces all 'spans' to be 1 column wide */
-        }
-        h1 {
-            font-size: 2rem; /* Shrinks your name slightly so it doesn't wrap weirdly */
-        }
-    }
-
     </style>
 </head>
-<body>
+<body oncontextmenu="return false;">
 
     <div class="container">
         <div class="card hero">
             <div class="status-badge">
-                <div class="status-dot"></div> Available for Sessions
+                <div class="status-dot"></div> AVAILABLE FOR SESSIONS
             </div>
-            <div>
-                <h1>Kate Karleen</h1>
-                <p>Voiceover Artist • <em>Clear narration and versatile character performance.</em></p>
-            </div>
+            <h1>Kate Karleen</h1>
+            <p>Voiceover Artist • <em>Clear narration and versatile character performance.</em></p>
         </div>
 
-        <div class="card cta-card">
-            <a href="mailto:book@katekarleen.com">CONTACT→</a>
-        </div>
+        <a href="mailto:book@katekarleen.com" class="cta-card">
+            <span>CONTACT→</span>
+        </a>
 
         <div class="card reels-card">
-            <h2 style="font-family: 'Playfair Display', serif;">Sample Reels Coming Soon!</h2>
+            <h2>Sample Reels Coming Soon!</h2>
             <div class="reel-item">
-                <span class="reel-tag">Animation / Games</span>
+                <span class="reel-label">Animation / Games</span>
                 <audio controls src="assets/character-reel.mp3"></audio>
             </div>
             <div class="reel-item">
-                <span class="reel-tag">Commercial / Narration</span>
+                <span class="reel-label">Commercial / Narration</span>
                 <audio controls src="assets/commercial-reel.mp3"></audio>
             </div>
         </div>
@@ -186,25 +158,27 @@
                 <span class="tag">Animation</span>
                 <span class="tag">Commercial</span>
                 <span class="tag">Trailer/Promo</span>
-		<span class="tag">Audiobook</span>
+                <span class="tag">Audiobook</span>
                 <span class="tag">Technical Explainer</span>
-		<span class="tag">E-learning</span>
+                <span class="tag">E-learning</span>
             </div>
         </div>
 
+        <div class="card art-card">
+            <img src="./studio-art.png" alt="Kate Karleen Studio Illustration">
+        </div>
+
         <div class="card specs-card">
-			<img src="./studio-art.png" alt="Illustration of Kate Karleen in her studio with headphones and microphone" class="studio-art">
             <div class="spec-item"><strong>Mic</strong><span>Lewitt LCT 440 Pure / Shure SM7B</span></div>
             <div class="spec-item"><strong>Interface</strong><span>Scarlett 2i2 4th Gen</span></div>
-            <div class="spec-item"><strong>Room</strong><span>Acoustically-Treated Booth </span></div>
+            <div class="spec-item"><strong>Room</strong><span>Acoustically-Treated Booth</span></div>
             <div class="spec-item"><strong>Connectivity</strong><span>SourceConnect / Zoom</span></div>
         </div>
 
-        <footer style="grid-column: span 4; text-align: center; padding: 20px; opacity: 0.4; font-size: 0.8rem;">
+        <footer style="grid-column: span 4; text-align: center; padding: 20px; opacity: 0.4; font-size: 0.8rem; width: 100%;">
             &copy; 2026 Kate Karleen. Professional Voiceover Services.
         </footer>
     </div>
 
 </body>
 </html>
-
