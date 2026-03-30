@@ -15,7 +15,18 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
+
+.studio-art {
+    width: 100%;        /* Makes the image fit the width of the card */
+    height: 250px;      /* Fixes the height so it doesn't take up the whole screen */
+    object-fit: cover;  /* Magic! This crops the image so it doesn't look "squished" */
+    display: block;     /* Removes weird gaps at the bottom */
+    border-radius: 15px 15px 0 0; /* Rounds the top corners to match your cards */
+    margin-bottom: 15px; /* Adds space before your Navy text starts */
+}
+
+		
         body {
             background: linear-gradient(135deg, var(--oatmeal) 0%, var(--lilac) 100%);
             background-attachment: fixed;
