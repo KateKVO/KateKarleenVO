@@ -155,15 +155,26 @@
             min-height: 300px;
         }
 		.hero-avatar {
-            width: 100px !important;
-            height: 100px !important;
+            width: 120px !important;
+            height: 120px !important;
             object-fit: cover !important;
-            border-radius: 20px;
+            border-radius: 24px;
             flex-shrink: 0;
             border: 3px solid white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-    </style>
-    }
+
+        /* Mobile adjustment for the headshot */
+        @media (max-width: 600px) {
+            .hero-content-wrapper {
+                flex-direction: column-reverse;
+                align-items: flex-start !important;
+            }
+            .hero-avatar {
+                width: 80px !important;
+                height: 80px !important;
+            }
+        }
     </style>
 </head>
 <body oncontextmenu="return false;">
@@ -174,8 +185,6 @@
         <div class="status-dot"></div> Available for Sessions
     </div>
     <div class="hero-content-wrapper" style="display: flex; align-items: center; gap: 20px;">
-        
-        
         <div>
             <h1>Kate Karleen</h1>
             <p>Voiceover Artist • <em>Clear narration and versatile character performance.</em></p>
