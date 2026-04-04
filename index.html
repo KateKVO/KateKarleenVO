@@ -127,34 +127,36 @@
         .spec-item span { font-size: 1.1rem; font-weight: 700; color: var(--navy); }
 
         /* CONSOLIDATED MOBILE FIX */
-    @media (max-width: 900px) {
-        .container {
-            display: flex !important;
-            flex-direction: column !important;
-            padding: 15px;
-            gap: 20px;
+        @media (max-width: 900px) {
+            .container {
+                display: flex !important;
+                flex-direction: column !important;
+                padding: 15px;
+                gap: 20px;
+            }
+            .card {
+                width: 100% !important;
+                height: auto !important;
+                grid-column: span 1 !important;
+                padding: 30px 20px !important;
+            }
+            .hero h1 {
+                font-size: 2.2rem !important;
+            }
+            .tag-cloud {
+                justify-content: flex-start;
+            }
+            .tag {
+                font-size: 0.75rem;
+            }
+            .art-card, .specs-card {
+                height: auto !important;
+                min-height: 300px;
+            }
         }
-        .card {
-            width: 100% !important;
-            height: auto !important;
-            grid-column: span 1 !important;
-            padding: 30px 20px !important;
-        }
-        .hero h1 {
-            font-size: 2.2rem !important; /* Prevents your name from overlapping */
-        }
-        .tag-cloud {
-            justify-content: flex-start;
-        }
-        .tag {
-            font-size: 0.75rem; /* Keeps specialties on one line when possible */
-        }
-        /* Fixes the squished Art/Specs section */
-        .art-card, .specs-card {
-            height: auto !important;
-            min-height: 300px;
-        }
-		.hero-avatar {
+
+        /* HEADSHOT FIX - THIS MUST BE OUTSIDE THE MEDIA QUERY */
+        .hero-avatar {
             width: 120px !important;
             height: 120px !important;
             object-fit: cover !important;
@@ -164,7 +166,6 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        /* Mobile adjustment for the headshot */
         @media (max-width: 600px) {
             .hero-content-wrapper {
                 flex-direction: column-reverse;
@@ -174,9 +175,10 @@
                 width: 80px !important;
                 height: 80px !important;
             }
+        }
     </style>
 </head>
-<body oncontextmenu="return false;">
+	<body oncontextmenu="return false;">
 
     <div class="container">
        <div class="card hero">
