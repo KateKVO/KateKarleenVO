@@ -116,23 +116,35 @@
         .spec-item strong { display: block; font-size: 0.7rem; text-transform: uppercase; color: var(--sage); margin-bottom: 4px; letter-spacing: 1px; }
         .spec-item span { font-size: 1.1rem; font-weight: 700; color: var(--navy); }
 
-        ```css
-        @media (max-width: 900px) {
-            .container { 
-                display: flex !important; 
-                flex-direction: column !important; 
-                gap: 20px;
-                padding: 15px;
-            }
-            .card { 
-                width: 100% !important; 
-                height: auto !important; 
-                grid-column: span 1 !important;
-            }
-            .hero h1 { 
-                font-size: 2.5rem; 
-            }
+        /* CONSOLIDATED MOBILE FIX */
+    @media (max-width: 900px) {
+        .container {
+            display: flex !important;
+            flex-direction: column !important;
+            padding: 15px;
+            gap: 20px;
         }
+        .card {
+            width: 100% !important;
+            height: auto !important;
+            grid-column: span 1 !important;
+            padding: 30px 20px !important;
+        }
+        .hero h1 {
+            font-size: 2.2rem !important; /* Prevents your name from overlapping */
+        }
+        .tag-cloud {
+            justify-content: flex-start;
+        }
+        .tag {
+            font-size: 0.75rem; /* Keeps specialties on one line when possible */
+        }
+        /* Fixes the squished Art/Specs section */
+        .art-card, .specs-card {
+            height: auto !important;
+            min-height: 300px;
+        }
+    }
     </style>
 </head>
 <body oncontextmenu="return false;">
