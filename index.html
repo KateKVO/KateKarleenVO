@@ -143,15 +143,6 @@
         .hero h1 {
             font-size: 2.2rem !important; /* Prevents your name from overlapping */
         }
-		.hero-avatar {
-  		  width: 100px;           /* Sets the specific width */
-  		  height: 100px;          /* Sets the specific height */
-   		 object-fit: cover;      /* Prevents the face from looking stretched */
-   		 border-radius: 20px;    /* Gives it those nice rounded corners */
-   		 flex-shrink: 0;         /* Prevents the text from squishing the image */
-   		 border: 3px solid white; /* Optional: Adds a clean border */
-		}
-		
         .tag-cloud {
             justify-content: flex-start;
         }
@@ -163,6 +154,15 @@
             height: auto !important;
             min-height: 300px;
         }
+		.hero-avatar {
+            width: 100px !important;
+            height: 100px !important;
+            object-fit: cover !important;
+            border-radius: 20px;
+            flex-shrink: 0;
+            border: 3px solid white;
+        }
+    </style>
     }
     </style>
 </head>
