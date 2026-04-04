@@ -116,10 +116,22 @@
         .spec-item strong { display: block; font-size: 0.7rem; text-transform: uppercase; color: var(--sage); margin-bottom: 4px; letter-spacing: 1px; }
         .spec-item span { font-size: 1.1rem; font-weight: 700; color: var(--navy); }
 
+        ```css
         @media (max-width: 900px) {
-            .container { grid-template-columns: 1fr; }
-            .hero, .cta-card, .reels-card, .specialty-card, .art-card, .specs-card { grid-column: span 1; }
-            .art-card, .specs-card { height: auto; padding: 30px; }
+            .container { 
+                display: flex !important; 
+                flex-direction: column !important; 
+                gap: 20px;
+                padding: 15px;
+            }
+            .card { 
+                width: 100% !important; 
+                height: auto !important; 
+                grid-column: span 1 !important;
+            }
+            .hero h1 { 
+                font-size: 2.5rem; 
+            }
         }
     </style>
 </head>
