@@ -5,245 +5,472 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kate Karleen | Professional Voice Over</title>
 
-		<meta name="description" content="Kate Karleen - Professional Voice Actress specializing in Indie Games, Animation, and Commercial narration.">
-		<meta name="keywords" content="Kate Karleen, Voice Actress, Indie Game Voice Talent, Animation Voice Over, Voice Actor, Character Voice Acting, Voice Talent, Voice Over, Affordable Voice Over, Pretty Female Voiceover, voiceover, professional, teen, young woman, woman, voice, creative, trustworthy, Gentle">
-		<meta name="author" content="Kate Karleen">
-		<meta property="og:title" content="Kate Karleen | Professional Voice Over">
-		<meta property="og:description" content="Versatile voice talent for games, animation, and commercial projects. Hear my latest reels.">
-		<meta property="og:image" content="https://katekarleen.com/studio-art.png"> 
-		<meta property="og:url" content="https://katekarleen.com">
-		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="shortcut icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-		<link rel="manifest" href="/site.webmanifest" />
-	
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <meta name="description" content="Kate Karleen - Professional Voice Actress specializing in Indie Games, Animation, and Commercial narration.">
+    <meta name="keywords" content="Kate Karleen, Voice Actress, Indie Game Voice Talent, Animation Voice Over, Voice Actor, Character Voice Acting, Voice Talent, Voice Over, Affordable Voice Over, Pretty Female Voiceover, voiceover, professional, teen, young woman, woman, voice, creative, trustworthy, gentle, game voice, NPC voice, main character voice, seductive voice, sultry voice, commercial voice, advertisement voice">
+    <meta name="author" content="Kate Karleen">
+    <meta property="og:title" content="Kate Karleen | Professional Voice Over">
+    <meta property="og:description" content="Versatile voice talent for games, animation, and commercial projects. Hear my latest clips! Demo reels coming soon">
+    <meta property="og:image" content="https://katekarleen.com/studio-art.png"> 
+    <meta property="og:url" content="https://katekarleen.com">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- ACCESSIBLE & CHARMING FONT EMBEDS -->
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --lilac: #C9A0DC;
-            --oatmeal: #F9F5F2;
-            --navy: #1A2238;
-            --sage: #708238;
-            --glass: rgba(255, 255, 255, 0.7);
+            /* DARK PALETTE COMPONENTS */
+            --bg-plum: #2E0E33;          /* Dark Plum Base */
+            --bg-violet: #42164A;        /* Deep Studio Violet */
+            --text-dark: #1F0822;        /* High-contrast text for light sections */
+            
+            /* LIGHT PALETTE COMPONENTS */
+            --bg-oatmeal: #F5EFEB;       /* Crisp, warm light break */
+            --bg-lilac: #EFEAF2;         /* Soft, bright lilac break */
+            --sage-green: #607A66;       /* Editorial branding accent */
+            
+            /* ACCENTS */
+            --petal-pink: #E08BB2;       /* High-energy interactive pink */
+            --text-light: #FAF6FB;       /* Light text for dark sections */
+            --white: #FFFFFF;
+            --card-overlay: rgba(20, 5, 24, 0.4);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         img { -webkit-user-drag: none; user-select: none; }
 
         body {
-            background: linear-gradient(135deg, var(--oatmeal) 0%, var(--lilac) 100%);
-            background-attachment: fixed;
-            color: var(--navy);
             font-family: 'Plus Jakarta Sans', sans-serif;
-            padding: 40px 20px;
+            background-color: var(--bg-oatmeal);
+            line-height: 1.6;
+            letter-spacing: 0.1px;
         }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 24px;
+        /* SECTION ARCHITECTURE */
+        section {
+            padding: 120px 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .card {
-            background: var(--glass);
-            backdrop-filter: blur(12px);
-            border-radius: 32px;
-            padding: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
-            transition: all 0.4s ease;
+        .content-wrapper {
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            gap: 45px;
         }
 
-        /* HEADER */
-        .hero { grid-column: span 3; }
-        .status-badge {
-            background: white;
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-size: 0.7rem;
+        /* THEME HEADINGS USING ALICE */
+        .theme-dark h2 {
+            font-family: 'Alice', serif;
+            font-size: 3.4rem;
+            font-weight: 400;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .theme-light h2 {
+            font-family: 'Alice', serif;
+            font-size: 3.4rem;
+            font-weight: 400;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        /* 1. HERO SECTION (DARK PLUM) */
+        #hero-section {
+            background-color: var(--bg-plum);
+            color: var(--text-light);
+            padding: 60px 20px 120px 20px;
+        }
+
+        .nav-placeholder {
+            display: flex;
+            justify-content: flex-start;
+            gap: 30px;
             font-weight: 700;
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 20px;
+            margin-bottom: 50px;
         }
-        .status-dot { width: 8px; height: 8px; background: var(--sage); border-radius: 50%; box-shadow: 0 0 10px var(--sage); }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1; margin-bottom: 10px; }
-        .hero p { font-size: 1.1rem; font-weight: 300; }
 
-        /* REVERTED CONTACT BUTTON */
-        .cta-card { 
-            grid-column: span 1; 
-            background: var(--navy); 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            text-decoration: none; 
-            border-radius: 32px; 
-            transition: transform 0.3s ease;
+        .nav-placeholder a {
+            color: var(--petal-pink);
+            text-decoration: none;
+            transition: color 0.2s;
         }
-        .cta-card:hover { transform: translateY(-5px); background: #252e4a; }
-        .cta-card span { color: var(--lilac); font-weight: 700; font-size: 1.3rem; letter-spacing: 1px; }
 
-        /* DEMOS */
-        .reels-card { grid-column: span 2; }
-        .reels-card h2 { font-family: 'Playfair Display', serif; margin-bottom: 20px; }
-        .reel-item { margin-top: 15px; background: white; padding: 20px; border-radius: 20px; display: flex; flex-direction: column; gap: 8px; }
-        .reel-label { font-size: 0.7rem; font-weight: 800; color: var(--sage); text-transform: uppercase; letter-spacing: 1px; }
-        audio { width: 100%; height: 40px; }
+        .nav-placeholder a:hover { 
+            color: var(--white);
+        }
 
-        /* SPECIALTIES */
-        .specialty-card { grid-column: span 2; }
-        .specialty-card h3 { font-family: 'Playfair Display', serif; margin-bottom: 15px; font-size: 1.8rem; }
-        .specialty-card p { font-size: 0.95rem; margin-bottom: 20px; opacity: 0.8; }
-        .tag-cloud { display: flex; flex-wrap: wrap; gap: 10px; }
-        .tag { background: white; padding: 8px 16px; border-radius: 12px; font-size: 0.8rem; font-weight: 600; box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
+        .hero-main {
+            width: 100%;
+            margin-top: 20px;
+        }
 
-        /* SIDE-BY-SIDE ART & SPECS */
-        .art-card { 
-            grid-column: span 2; 
-            padding: 0; 
-            overflow: hidden; 
-            height: 500px; 
+        .hero-intro-wrapper {
             display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            background: white; /* Clean background for the character */
-        }
-        .art-card img { max-width: 100%; max-height: 100%; object-fit: contain; }
-
-        .specs-card { 
-            grid-column: span 2; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            gap: 25px; 
-            background: white; 
-            padding: 40px;
-            height: 500px;
-        }
-        .spec-item { border-left: 4px solid var(--sage); padding-left: 20px; }
-        .spec-item strong { display: block; font-size: 0.7rem; text-transform: uppercase; color: var(--sage); margin-bottom: 4px; letter-spacing: 1px; }
-        .spec-item span { font-size: 1.1rem; font-weight: 700; color: var(--navy); }
-
-        /* CONSOLIDATED MOBILE FIX */
-        @media (max-width: 900px) {
-            .container {
-                display: flex !important;
-                flex-direction: column !important;
-                padding: 15px;
-                gap: 20px;
-            }
-            .card {
-                width: 100% !important;
-                height: auto !important;
-                grid-column: span 1 !important;
-                padding: 30px 20px !important;
-            }
-            .hero h1 {
-                font-size: 2.2rem !important;
-            }
-            .tag-cloud {
-                justify-content: flex-start;
-            }
-            .tag {
-                font-size: 0.75rem;
-            }
-            .art-card, .specs-card {
-                height: auto !important;
-                min-height: 300px;
-            }
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 30px;
         }
 
-        /* HEADSHOT FIX - THIS MUST BE OUTSIDE THE MEDIA QUERY */
-        .hero-avatar {
-            width: 200px !important;
-            height: 200px !important;
-            object-fit: cover !important;
-            border-radius: 24px;
+        .hero-text h1 {
+            font-family: 'Alice', serif;
+            font-size: clamp(3.4rem, 6vw, 5rem);
+            font-weight: 400;
+            line-height: 1.1;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            font-size: 1.35rem;
+            font-weight: 300;
+            color: var(--text-light);
+            opacity: 0.95;
+            margin-bottom: 35px;
+        }
+
+        .hero-circle-avatar {
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--petal-pink);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
             flex-shrink: 0;
-            border: 3px solid white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
-        @media (max-width: 600px) {
-            .hero-content-wrapper {
+        /* REELS CONTAINER */
+        .reels-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            width: 100%;
+        }
+
+        .reel-item {
+            background: var(--card-overlay);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 28px;
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            border: 1px solid rgba(224, 139, 178, 0.2);
+        }
+
+        .reel-label {
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--petal-pink);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        audio { 
+            width: 100%; 
+            height: 40px; 
+            border-radius: 8px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--petal-pink);
+            color: var(--bg-plum);
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(224, 139, 178, 0.25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background: var(--white);
+            color: var(--bg-plum);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+        }
+
+        /* 2. ABOUT SECTION (LIGHT OATMEAL BREAK) */
+        #about-section {
+            background-color: var(--bg-oatmeal);
+            color: var(--text-dark);
+        }
+
+        .about-layout {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-square-avatar {
+            width: 320px;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 32px;
+            border: 4px solid var(--sage-green);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-text p {
+            font-size: 1.18rem;
+            line-height: 1.75;
+            margin-bottom: 30px;
+            color: #3a2e3c;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tag {
+            background: var(--white);
+            color: var(--text-dark);
+            padding: 10px 20px;
+            border-radius: 14px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            transition: all 0.2s;
+        }
+        
+        .tag:hover {
+            border-color: var(--sage-green);
+            color: var(--sage-green);
+            transform: translateY(-2px);
+        }
+
+        /* 3. STUDIO SECTION (DARK VIOLET) */
+        #studio-section {
+            background-color: var(--bg-violet);
+            color: var(--text-light);
+        }
+
+        .studio-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .art-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .art-container img {
+            max-width: 100%;
+            height: auto;
+            max-height: 420px;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 35px rgba(0,0,0,0.4));
+        }
+
+        .specs-list {
+            display: flex;
+            flex-direction: column;
+            gap: 26px;
+        }
+
+        .spec-item {
+            border-left: 4px solid var(--petal-pink);
+            padding-left: 22px;
+        }
+
+        .spec-item strong {
+            display: block;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            color: var(--petal-pink);
+            margin-bottom: 6px;
+            letter-spacing: 1.5px;
+        }
+
+        .spec-item span {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        /* 4. CONTACT SECTION (LIGHT LILAC BREAK) */
+        #contact-section {
+            background-color: var(--bg-lilac);
+            color: var(--text-dark);
+            text-align: center;
+            padding: 130px 20px;
+        }
+
+        #contact-section p {
+            font-size: 1.25rem;
+            color: #3a2e3c;
+            margin-bottom: 45px;
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background: var(--bg-plum);
+            color: var(--white);
+            padding: 22px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(46, 14, 51, 0.15);
+        }
+
+        .btn-secondary:hover { 
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(46, 14, 51, 0.3);
+            background: var(--petal-pink);
+            color: var(--bg-plum);
+        }
+
+        footer {
+            margin-top: 90px;
+            opacity: 0.6;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            color: var(--text-dark);
+        }
+
+        /* RESPONSIVE DESIGN INTERPOLATION */
+        @media (max-width: 850px) {
+            section { padding: 90px 20px; }
+            .nav-placeholder { justify-content: center; }
+            .reels-container, .about-layout, .studio-layout { grid-template-columns: 1fr; gap: 40px; }
+            .about-layout { text-align: center; }
+            .about-square-avatar { margin: 0 auto; width: 240px; height: 240px; }
+            .tag-cloud { justify-content: center; }
+            .art-container { order: 2; }
+            .specs-list { order: 1; }
+        }
+
+        @media (max-width: 650px) {
+            .hero-intro-wrapper {
                 flex-direction: column-reverse;
-                align-items: flex-start !important;
+                text-align: center;
+                gap: 25px;
             }
-            .hero-avatar {
-                width: 100px !important;
-                height: 100px !important;
+            .hero-circle-avatar {
+                width: 150px;
+                height: 150px;
             }
         }
     </style>
 </head>
-	<body oncontextmenu="return false;">
+<body>
 
-    <div class="container">
-       <div class="card hero">
-    <div class="status-badge">
-        <div class="status-dot"></div> Available for Sessions
-    </div>
-    <div class="hero-content-wrapper" style="display: flex; align-items: center; justify-content: space-between; gap: 20px;">
-        <div>
-            <h1>Kate Karleen</h1>
-            <p>Voiceover Artist • <em>Providing clear commercial narration, vibrant personality for animation and games, and engaging audiobook storytelling.</em></p>
-        </div>
-        <img src="./branding-katekarleen-headshot.jpg" alt="Kate Karleen Professional Headshot" class="hero-avatar">
-    </div>
-</div>
+    <!-- HERO / DEMOS SECTION (DARK THEME) -->
+    <section id="hero-section" class="theme-dark">
+        <div class="content-wrapper">
+            <nav class="nav-placeholder">
+                <a href="#hero-section">Home</a>
+                <a href="#about-section">About</a>
+                <a href="#studio-section">Studio</a>
+                <a href="#contact-section">Contact</a>
+            </nav>
 
-
-        <a href="mailto:book@katekarleen.com" class="cta-card">
-            <span>CONTACT→</span>
-        </a>
-
-        <div class="card reels-card">
-            <h2>Commercial Samples and More Coming Soon!</h2>
-            <div class="reel-item">
-                <span class="reel-label">Animation / Games</span>
-                <audio controls src="assets/character-reel.mp3"></audio>
+            <div class="hero-main">
+                <div class="hero-intro-wrapper">
+                    <div class="hero-text">
+                        <h1>Kate Karleen</h1>
+                        <p>Voiceover Artist <br> Bringing Life to Lore,  and Voice to Your Venture </br></p>
+                        <a href="mailto:book@katekarleen.com" class="btn-primary">WORK WITH KATE</a>
+                    </div>
+                    <img src="./branding-katekarleen-headshot.jpg" alt="Kate Karleen Circular Headshot" class="hero-circle-avatar">
+                </div>
             </div>
-            <div class="reel-item">
-                <span class="reel-label">Commercial / Narration</span>
-                <audio controls src="assets/commercial-reel.mp3"></audio>
-            </div>
-        </div>
 
-        <div class="card specialty-card">
-            <h3>Specialties</h3>
-            <p>From commercial narration to high-energy character dubbing and trailers, I bring precision and performance to every script.</p>
-            <div class="tag-cloud">
-                <span class="tag">Video Game</span>
-                <span class="tag">Animation</span>
-                <span class="tag">Commercial</span>
-                <span class="tag">Trailer/Promo</span>
-                <span class="tag">Audiobook</span>
-                <span class="tag">Technical Explainer</span>
-                <span class="tag">E-learning</span>
+            <div class="reels-container">
+                <div class="reel-item">
+                    <span class="reel-label">Animation / Games Sample Clips</span>
+                    <audio controls src="assets/character-reel.mp3"></audio>
+                </div>
+                <div class="reel-item">
+                    <span class="reel-label">Commercial / Narration Sample Clips</span>
+                    <audio controls src="assets/commercial-reel.mp3"></audio>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="card art-card">
-            <img src="./studio-art.png" alt="Kate Karleen Studio Illustration">
+    <!-- ABOUT SECTION (LIGHT THEME BREAK) -->
+    <section id="about-section" class="theme-light">
+        <div class="content-wrapper">
+            <div class="about-layout">
+                <img src="./branding-katekarleen-headshot.jpg" alt="Kate Karleen Professional Headshot" class="about-square-avatar">
+                <div class="about-text">
+                    <h2>About Kate</h2>
+                    <p>I deliver polished commercial reads, passionate leads, and grounded character voices that make <b>your</b> story feel truly alive. Breathing life into your script is my passion. Listen to some samples above.</p>
+                    
+                    <div class="tag-cloud">
+                        <span class="tag">Video Game</span>
+                        <span class="tag">Animation</span>
+                        <span class="tag">Commercial</span>
+                        <span class="tag">Trailer/Promo</span>
+                        <span class="tag">Audiobook</span>
+                        <span class="tag">Technical Explainer</span>
+                        <span class="tag">E-learning</span>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="card specs-card">
-            <div class="spec-item"><strong>Mic</strong><span>Lewitt LCT 440 Pure / Shure SM7B</span></div>
-            <div class="spec-item"><strong>Interface</strong><span>Scarlett 2i2 4th Gen</span></div>
-            <div class="spec-item"><strong>Room</strong><span>Acoustically-Treated Booth</span></div>
-            <div class="spec-item"><strong>Connectivity</strong><span>SourceConnect / Zoom</span></div>
+    <!-- STUDIO SECTION (DARK THEME) -->
+    <section id="studio-section" class="theme-dark">
+        <div class="content-wrapper">
+            <h2>The Studio</h2>
+            <div class="studio-layout">
+                <div class="specs-list">
+                    <div class="spec-item"><strong>Mic</strong><span>Lewitt LCT 440 Pure / Shure SM7B</span></div>
+                    <div class="spec-item"><strong>Interface</strong><span>Scarlett 2i2 4th Gen</span></div>
+                    <div class="spec-item"><strong>Room</strong><span>Acoustically-Treated Booth</span></div>
+                    <div class="spec-item"><strong>Connectivity</strong><span>SourceConnect / Zoom / Discord</span></div>
+                </div>
+                <div class="art-container">
+                    <img src="./studio-art.png" alt="Kate Karleen Studio Illustration">
+                </div>
+            </div>
         </div>
+    </section>
 
-        <footer style="grid-column: span 4; text-align: center; padding: 20px; opacity: 0.4; font-size: 0.8rem; width: 100%;">
-            &copy; 2026 Kate Karleen. Professional Voiceover Services.
-        </footer>
-    </div>
+    <!-- CONTACT / FOOTER SECTION (LIGHT THEME BREAK) -->
+    <section id="contact-section" class="theme-light">
+        <div class="content-wrapper">
+            <h2>Get In Touch</h2>
+            <p>Have a script, a custom audition request, or a character role ready to cast? Let's connect.</p>
+            <div>
+                <a href="mailto:book@katekarleen.com" class="btn-secondary">book@katekarleen.com</a>
+            </div>
+            
+            <footer>
+                &copy; 2026 Kate Karleen. Professional Voiceover Services.
+            </footer>
+        </div>
+    </section>
 
 </body>
 </html>
